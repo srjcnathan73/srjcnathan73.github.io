@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+    <title>Cards and Conditionals</title>
+    
+    <!-- step 1: load jQuery library -->
+	<script src="jquery-1.12.0.min.js"></script>
+    
+    <!-- step 2: load playing cards project files (js + css) -->
+	<script src="playingCards.js"></script>
+	<script src="playingCards.ui.js"></script>
+    <link rel="stylesheet" type="text/css" href="playingCards.ui.css">
+	<style type="text/css">
+
+	h1 {color:#ff3333;text-shadow:4px 3px 0px rgba(0, 0, 0, 0.5);}
+	body {background-color:#016836;}
+	button {margin-top: 10px;}
+	</style>
+</head>
+<body>
+	<h1>Playing Cards and Conditionals<br>
+	<br>Blackjack!</h1>
+	
+	<!-- step 3: provide html elements for UI -->
+	<div id="controls">
+		<button type="button" onclick="playRound();">
+			Deal Me In / Hit
+		</button>
+		
+	</div>
+	
+	<h2 id="scoreboard">
+	</h2>
+	
+	<div id="cardtray">
+	</div>
+	<div id="hittray">
+	</div>
+	<!-- step 4: create game flow in javascript --> 
+	<script>
+		// set score
+		var score = 0;
+		
+		// create card deck object
+        var cardDeck = $("#cardtray,#dealercardtray").playingCards();
+        
+        // shuffle card objects
+        cardDeck.shuffle();
+		
+
+		function playRound() {
+			// draw one card object from deck
+			var card = cardDeck.draw();
+			
+			
+			// log card object to browser console for observing
+			console.log( card );
+			
+			// use conditional statement, if, to decide scoring
+			
+				if ( card.rank == 'K' ) {
+					score = score + 10;
+				}
+				if ( card.rank == 'Q' ) {
+					score = score + 10;
+				}
+				if ( card.rank == 'J' ) {
+					score = score + 10;
+				}
+				if ( card.rank == '10' ) {
+					score = score + 10;
+				}
+				if ( card.rank == '9' ) {
+					score = score + 9;
+				}
+				if ( card.rank == '8' ) {
+					score = score + 8;
+				}
+				if ( card.rank == '7' ) {
+					score = score + 7;
+				}
+				if ( card.rank == '6' ) {
+					score = score + 6;
+				}
+				if ( card.rank == '5' ) {
+					score = score + 5;
+				}
+				if ( card.rank == '4' ) {
+					score = score + 4;
+				}
+				if ( card.rank == '3' ) {
+					score = score + 3;
+				}
+				if ( card.rank == '2' ) {
+					score = score + 2;
+				}
+				if ( card.rank == 'A' ) {
+					score = score + 1;
+				}
+				
+			
+			// control for score floor at zero
+			if ( score < 0 ) {
+				score = 0;
+			}
+			
+			
+		// output score
+			$('#scoreboard').html( score );
+			
+			
+			// output html for card drawn
+			var markup = card.getHTML();
+			
+			$('#hittray').append( markup );
+			
+			if ( score == 21 ) {
+			alert("Blackjack!!!");
+			}
+		if ( score > 21 ) {
+			alert("Busted!!!");
+			}	
+		}
+		
+		
+		
+	</script>
+<div id="controls" style="clear:both;">
+		<button type="button" onclick="playRounddealer();">
+			Dealer hand / Hit
+		</button>
+		
+	</div>
+	
+	<h2 id="dealerscorescoreboard">
+	</h2>
+	
+	<div id="dealercardtray">
+	</div>
+	<div id="dealerhittray">
+	</div>
+		<script>
+		// set score
+		var score2 = 0;
+		
+		// create card deck object
+        var cardDeck2 = $("#dealercardtray").playingCards();
+        
+        // shuffle card objects
+        cardDeck2.shuffle();
+		
+
+		function playRounddealer() {
+			// draw one card object from deck
+			var card2 = cardDeck2.draw();
+			
+			
+			// log card object to browser console for observing
+			console.log( card2 );
+			
+			// use conditional statement, if, to decide scoring
+			
+				if ( card2.rank == 'K' ) {
+					score2 = score2 + 10;
+				}
+				if ( card2.rank == 'Q' ) {
+					score2 = score2 + 10;
+				}
+				if ( card2.rank == 'J' ) {
+					score2 = score2 + 10;
+				}
+				if ( card2.rank == '10' ) {
+					score2 = score2 + 10;
+				}
+				if ( card2.rank == '9' ) {
+					score2 = score2 + 9;
+				}
+				if ( card2.rank == '8' ) {
+					score2 = score2 + 8;
+				}
+				if ( card2.rank == '7' ) {
+					score2 = score2 + 7;
+				}
+				if ( card2.rank == '6' ) {
+					score2 = score2 + 6;
+				}
+				if ( card2.rank == '5' ) {
+					score2 = score2 + 5;
+				}
+				if ( card2.rank == '4' ) {
+					score2 = score2 + 4;
+				}
+				if ( card2.rank == '3' ) {
+					score2 = score2 + 3;
+				}
+				if ( card2.rank == '2' ) {
+					score2 = score2 + 2;
+				}
+				if ( card2.rank == 'A' ) {
+					score2 = score2 + 1;
+				}
+				
+			
+			// control for score floor at zero
+			if ( score2 < 0 ) {
+				score2 = 0;
+			}
+			
+			
+		// output score
+			$('#dealerscorescoreboard').html( score2 );
+			
+			
+			// output html for card drawn
+			var markup2 = card2.getHTML();
+			
+			$('#dealerhittray').append( markup2 );
+			
+			if ( score2 == 21 ) {
+			alert("Blackjack Dealer Wins!!!");
+			}
+		if ( score2 > 21 ) {
+			alert("Dealer Busted You Win!!!");
+			}	
+		}
+		
+		
+		
+	</script>
+		<div id="controls" style="clear:both;">
+		<button type="button" onclick="compare();">
+			Stand
+		</button>
+	<script>
+		function compare() {
+		if ( score > score2 ) {
+			alert("You Win!!!");}
+		if ( score == score2 ) {
+			alert("Draw!!!");}
+			}
+	</script>
+  <br><br>
+  <h1 style="clear:both;">Click Refresh for New Game</h1>
+</body>
+</html>
