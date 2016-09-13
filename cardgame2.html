@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+    <title>Cards and Conditionals 2</title>
+    
+    <!-- step 1: load jQuery library -->
+	<script src="jquery-1.12.0.min.js"></script>
+    
+    <!-- step 2: load playing cards project files (js + css) -->
+	<script src="playingCards.js"></script>
+	<script src="playingCards.ui.js"></script>
+    <link rel="stylesheet" type="text/css" href="playingCards.ui.css">
+	<style type="text/css">
+
+	h1 {color:#ff3333;text-shadow:4px 3px 0px rgba(0, 0, 0, 0.5);}
+	body {background-color:#016836; margin:30px;}
+	button {margin-top: 10px;background: #9F9;
+			height: 40px;
+			width: 150px ;
+			box-shadow:0 0 30px #000000, inset 0 0 10px #000000;
+			border-radius: 20px;
+			margin: 50px auto;
+			padding: 10px;
+			font-weight: bold;
+			}
+	#title {text-align:center;}
+	
+	</style>
+</head>
+<body>
+	<div id="title">
+	<img src="casino_sign.png" alt=sign height="316" width="900">
+	<h1>Blackjack!</h1>
+	</div>
+	<!-- step 3: provide html elements for UI -->
+	<div id="controls">
+	<button type="button" onclick="startRound();">Deal Me In</button>
+		<button type="button" onclick="drawAnotherCard();">Hit</button>
+		<button type="button" onclick="callDealer();">Stand</button>
+		
+	</div>
+	
+	<h3 id="results">
+	</h3>
+	
+	<div>
+		<h2>Dealer</h2>
+		<div id="cardtray1">
+		
+		</div>
+		<h3 id="scoreboard1" style="clear:both; padding:5px; margin:1px;">
+		</h3>
+	</div>
+	
+	<div>
+		<h2>Player</h2>
+		<div id="cardtray2">
+		</div>
+		<h3 id="scoreboard2" style="clear:both; padding:5px; margin:1px;">
+		</h3>
+	</div>
+	 <div style=" color:#9F9; font-size:large">You have:</div>
+    <div id="money" style=" color:yellow; font-size:x-large"></div>
+	<div id="betdiv" >
+       <span style="color:#9F9">Your bet: $</span>&nbsp; <input type="text" size="6" id="bet">
+    </div>
+	<!-- step 4: create the game (logic and flow) in javascript -->
+	<script>
+		// set up dealer and player scores to keep track of...
+		var dealerScore, playerScore;
+		
+		// set up dealer and player hands - list of cards for each player
+		var dealerHand, playerHand;
+		
+		// create a virtual deck of playing cards using the github project's code
+		// playingCards() is part of the github project's code we are using
+		var cardDeck = $('#cardtray').playingCards();
+		
+		// shuffle the virtual deck of cards
+		// shuffle() randomizes the order of all cards in the virtual deck
+		cardDeck.shuffle();
+		
+		var bet;
+		var betInput;
+		var money;
+		var moneyDisplay;
+		moneyDisplay = document.getElementById("money");
+			money = 200;
+			moneyDisplay.innerHTML = "$" + money;
+			betInput = document.getElementById("bet");
+			betInput.value = 10;
+			betInput.disabled = false;
+		
+		// this function cleans up the UI and resets score and hand variables
+		function startRound() {
+			// clear cardtrays
+			$('#cardtray1, #cardtray2, #scoreboard').empty();
+			
+			dealerScore = 0;
+			playerScore = 0;
+		
+			dealerHand = [];
+			playerHand = [];
+			
+			// the dealer's hand will result in a score for the dealer
+			drawCards(1, 2, dealerScore, dealerHand);
+			
+			// the dealer's hand will result in a score for the dealer
+			drawCards(2, 2, playerScore, playerHand);
+			betInput.disabled = true;
+			
+		
+		}
+		
+		
+		
+		// this function draws 1 or more cards for either player
+		function drawCards( player_number, card_count, score, hand ) {
+			// draw 2 cards for the dealer and save them in his hand
+			for (var i = 1; i <= card_count; i = i + 1) {
+				// draw the card from the deck
+				var card = cardDeck.draw();
+				// console.log(card);
+				
+				// evaluate the score the dealer earns for the current card
+				switch ( card.rank ) {
+					case "2":
+						score = score + 2;
+						break;
+					case "3":
+						score = score + 3;
+						break;
+					case "4":
+						score = score + 4;
+						break;
+					case "5":
+						score = score + 5;
+						break;
+					case "6":
+						score = score + 6;
+						break;
+					case "7":
+						score = score + 7;
+						break;
+					case "8":
+						score = score + 8;
+						break;
+					case "9":
+						score = score + 9;
+						break;
+					case "10":
+						score = score + 10;
+						break;
+					case "J":
+						score = score + 10;
+						break;
+					case "Q":
+						score = score + 10;
+						break;
+					case "K":
+						score = score + 10;
+						break;
+					case "A":
+						score = score + 11;
+						// if using 11 for ace goes over 21, switch to use 1 for ace
+						if ( score > 21) {
+							score = score - 10;
+						}
+						break;
+				}
+				
+				
+				hand.push(card);
+				// render the card into the page
+				var markup = card.getHTML();
+				var cardBack = "<img src='cardback.png'>"
+				if (player_number == 1) {
+					if (card_count == 2 && i == 1) {
+					dealerScore = 0;
+					$('#cardtray1').append(cardBack);}
+					else {$('#cardtray1').append(markup);
+					}
+					// update the dealer score
+					dealerScore = score;
+					
+					// save the card to dealer hand array
+					dealerHand.push( card );
+				} else {
+					$('#cardtray2').append(markup);
+					// update the player score
+					playerScore = score;
+					$('#scoreboard2').html(playerScore);
+					// save the card to player hand array
+					playerHand.push( card );
+				}
+				console.log('dealer:' + dealerScore);
+				console.log('player:' + playerScore);
+			}
+		}
+		
+		// this function draws another card for the player
+		function drawAnotherCard() {
+			drawCards(2, 1, playerScore, playerHand);
+			var betText = betInput.value;
+			
+			betInput.disabled = true;
+			bet = Number(betText);
+			if ( playerScore > 21 ) {
+				moneyDisplay.innerHTML = "$" + (money -= bet), $('#results').html( 'Player Loses! ' + playerScore + ' is over 21...');
+			}
+		}
+		
+		// this function lets the dealer try to win or bust
+		function callDealer() {
+			// continue to draw cards if total under 18
+			
+			while ( dealerScore < 17 ) {
+				drawCards(1, 1, dealerScore, dealerHand);
+			}
+			// do final score if bust
+			
+			if ( dealerScore > 21 ) {
+				moneyDisplay.innerHTML = "$" + (money += bet), $('#results').html( 'Player Wins! Dealer total of ' + dealerScore + ' is over 21...');
+			} else {
+				if (playerScore >= dealerScore) {
+					moneyDisplay.innerHTML = "$" + (money += bet), $('#results').html( 'Player Wins! ' + dealerScore + ' vs. ' + playerScore );
+				} else {
+					
+					moneyDisplay.innerHTML = "$" + (money -= bet), $('#results').html( 'Dealer Wins! ' + dealerScore + ' vs. ' + playerScore );
+				}
+				
+			
+			}
+			
+			
+		 
+        
+            
+           
+                   
+		}
+		function continueRound() {betInput.disabled = false;}
+		
+		
+	</script>
+	<br>
+	<button type="button" onclick="continueRound();">Continue Round</button>
+	<button type=button value="Refresh" onClick="history.go()">New Game</button>
+	
+</body>
+</html>
