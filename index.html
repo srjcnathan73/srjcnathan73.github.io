@@ -17,7 +17,7 @@
 
 		.back {
 		  position: absolute;
-		  top: 170px;
+		  top: 100px;
 		  width: 640px;
 		  height: 640px;
 		  z-index: 0;
@@ -113,7 +113,10 @@
 		  border-radius: 20px;
 		  margin: 2px auto;
 		  }
-		  
+		.history {
+			padding-top:0px;
+		} 
+		
 	</style>
 	<!-- load jQuery 1.12.4 from CDN -->
 	<script src="https://code.jquery.com/jquery-1.12.4.min.js"  
@@ -125,8 +128,15 @@
 
 </head>
 <body>
+	<div style= text-align:center;>
+	
+	<img src="simon_sign.png" alt=sign height="145" width="725">
+		</img>
+	</div>
+	
 	<div class="wrapper">
-		<div class= "history">
+		
+		<div class= "history"><h3>Your Click History Sequence Record</h3>
 		</div>
 		<div class="back">
 			<div class="pad shape1" id="green" data-pad="1"><audio id="sound1" src="Buzzsaw.wav" ></audio>
