@@ -1,0 +1,238 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Color Match Game</title>
+    <link rel="stylesheet" href="jquery-ui.css"/>
+    <script src="jquery.js"></script>
+    <script src="jquery-ui.js"></script>
+
+	<style>
+		#accord1 {
+			margin-bottom:10px;
+		}
+		#colorbox {
+			position: absolute;
+		}
+		#dialog1 {
+			color:blue;
+			
+			
+		}
+		.ui-draggable {
+			display: inline-block;
+			float: left;
+			width: 100px;
+			height: 100px;
+			margin: 20px;
+			cursor: move;
+			border: 1px solid black;
+			border-radius: 30px;
+			box-sizing: border-box;
+		}
+		#drop-zones {
+			position: absolute;
+			top: 650px;
+		}
+		#drop-zones > div {
+			display: inline-block;
+			float: left;
+			border: 1px solid black;
+			border-radius: 30px;
+			height: 100px;
+			width: 100px;
+			margin: 20px;
+			text-align: center;
+			padding-top: 40px;
+			box-sizing: border-box;
+			line-height: 10px;
+		}
+		body {
+			background-color:#66ccff;
+		}
+		
+		
+		.ui-state-active  {
+			border:2px solid #ff66ff;
+			
+			
+		}
+		.ui-widget-header {
+			background-color:#ff66ff;
+		}
+		.ui-dialog {
+			border:2px solid #ff66ff;
+			box-shadow: inset 0 0 10px #ff66ff;
+		}
+		.ui-dialog .ui-dialog-title {
+			color:purple;
+			
+		}
+		.ui-state-default {
+			color:purple;
+			background-color:#d8d8f4;
+		}
+		button {
+			color:purple;
+			background-color:#d8d8f4;
+			border:2px solid #ff66ff;
+			border-radius:4px;
+			width: 200px;
+			margin-bottom:10px;
+			font-family: Trebuchet MS,Tahoma,Verdana,Arial,sans-serif;
+			font-weight: bold;
+			font-size: 1.1em;
+		}
+	</style>
+</head>
+<body>
+<div id="accord1">
+        <h3> About this assignment</h3>
+        <div>
+            <p>This assignment is a colormatch, drag and drop exercise using a select 
+			menu to decide how many colors are used and a progress widget to track the 
+			actions of the exercise.</p>
+        </div>
+        <h3>About the creator</h3>
+        <div>
+            <p>Nathan Walker<br>
+			CS 55.11<br>
+			9/25/2016</p>
+        </div>
+</div>
+<form>
+        <select id="selmenu1">
+            <option>2 Colors</option>
+            <option>4 Colors</option>
+            <option>6 Colors</option>
+            <option>8 Colors</option>
+			<option>10 Colors</option>
+        </select>
+    </form>
+<button type=button value="Refresh" onClick="history.go()">New Exercise</button>
+
+<div id="prog1" class="progressbar"></div>
+
+<div id="colorbox"></div>
+
+<div id="drop-zones"></div>
+
+ 
+<script>
+	$(document).ready(function() {
+            // build a basic accordion widget
+            $("#accord1").accordion();
+			 $("#dialog1").dialog(
+            	{
+                	autoOpen: false
+            	}
+            );
+			
+        });
+	
+	// this function will randomly sort all of the elements in an array passed to it
+	function randomize( my_array ) {
+		return my_array.sort(
+			function() {
+				return 0.5 - Math.random();
+			}
+		);
+	};
+	
+	// set up a counter variable once to use in each for loop
+	var counter;
+	
+	// create an array of named colors that CSS understands
+	var colors = [ "red", "blue", "green", "yellow", "purple", "black", "brown", "pink", "aqua", "lavender" ];
+	$("#selmenu1").selectmenu(
+            	{
+            		width:200, 
+					select: function (event, ui){
+						if ($("#selmenu1").val()=="2 Colors")
+							colors.length = 2;
+							
+							else if ($("#selmenu1").val()=="4 Colors")
+							colors.length = 4;
+							
+							else if ($("#selmenu1").val()=="6 Colors")
+							colors.length = 6;
+							
+							else if ($("#selmenu1").val()=="8 Colors")
+							colors.length = 8;
+							
+							else if ($("#selmenu1").val()=="10 Colors")
+							colors.length = 10;
+						opener();
+				}
+            	}
+            );
+	
+	function opener() {
+	// randomize colors array first time
+	randomize( colors );
+
+	// loop though each element in the colors array
+	for ( counter = 0; counter < colors.length; counter++ ) {
+		// create a div inside #colorbox for each color, style and make draggable
+		$("<div>")
+			.attr( "id", colors[counter] )
+			.css( "background", colors[counter] )
+			.appendTo( "#colorbox" )
+			.draggable(
+				{ 
+					revert: "invalid", 
+					zIndex: 2 
+				}
+			);
+	}
+
+	// randomize colors array again
+	randomize( colors );
+	 // create a basic progressbar widget
+            $("#prog1").progressbar({
+                value: 0, 
+				
+                max: colors.length
+            });
+			
+	// loop though each element in the colors array again
+	for ( counter= 0; counter < colors.length; counter++ ) {
+		// create a div inside #drop-zones for each color, set text contents to color
+		$("<div>")
+			.text( colors[counter] )
+			.appendTo( "#drop-zones" );
+	}
+
+	// now have jQuery find all divs inside #drop-zones and enable droppable
+	$("#drop-zones > div").droppable(
+		{
+			// set accept drop function
+			accept: function( draggable ) {
+				return $( this ).text() == draggable.attr( "id" );
+				
+			},
+			// set drop function to run if accept returns true
+			drop: function( event, ui ) {
+				var color = ui.draggable.css( "background-color" );
+				$( this ).css( "background", color ).addClass( "filled" );
+				ui.draggable.hide( "puff" );
+				 
+				$('#prog1').progressbar('value', $( ".filled" ).length);
+           
+        
+				// use jQuery to count how many divs have class="filled"
+				if ( $( ".filled" ).length === colors.length ) {
+					$( "#dialog1" ).dialog('open');
+				
+				}
+			}
+		}
+	);
+	}
+</script>
+<div id="dialog1" title="You Win!!">
+        <p>Good Job Kid!!!</p>
+    </div>
+</body>
+</html>
