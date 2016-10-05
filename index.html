@@ -1,0 +1,170 @@
+<!doctype html>
+<html>
+<head>
+	<title>Simone Says</title>
+	<!-- css rules for game board -->
+	<style>
+		body {
+		  background:url(sky-night-stars.jpg);
+		  color: #fff;
+		}
+
+		.wrapper {
+		  position: relative;
+		  width: 640px;
+		  margin: 0 auto;
+		}
+
+		.back {
+		  position: absolute;
+		  top: 100px;
+		  width: 640px;
+		  height: 640px;
+		  z-index: 0;
+		  background-color: #000;
+		  border-radius: 310px;
+		  box-shadow:0 0 100px #cc0000, inset 0 0 10px #cc0000;
+		}
+
+		.pad {
+		  width: 300px;
+		  height: 300px;
+		  float: left;
+		  z-index: 1;
+		  margin: 10px;
+		  opacity: 0.6;
+		}
+
+		.shape1 {
+		  border-top-left-radius: 300px;
+		  background-color: green;
+		}
+
+		.shape2 {
+		  float: left;
+		  border-top-right-radius: 300px;
+		  background-color: red;
+		  clear: right;
+		}
+
+		.shape3 {
+		  float: left;
+		  border-bottom-left-radius: 300px;
+		  background-color: yellow;
+		  clear: left;
+		}
+
+		.shape4 {
+		  border-bottom-right-radius: 300px;
+		  background-color: blue;
+		  clear: right;
+		}
+		
+		.circle {
+		  position: absolute;
+		  top: 195px;
+		  left: 195px;
+		  width: 250px;
+		  height: 250px;
+		  background: -moz-radial-gradient(circle, #663399, #000); /* Firefox 3.6+ */
+			background: -webkit-gradient(radial , center center, 0, center center, 460, from (#663399) to(#000)); /* Safari 4 -5 , Chrome 1 -9 */
+			background: -webkit-radial-gradient(circle, #663399, #000); /* Safari 5.1 ,Chrome 10+ */
+			background: -ms-radial-gradient(circle, #663399, #000); /* IE 10 */
+			background: -o-radial-gradient(circle, #663399, #000); /* Opera 11.10+ */
+		  border:5px solid #000;
+		  border-radius: 125px;
+		  z-index: 10;
+		  text-align: center;
+		}
+
+		.level {
+		  color: #acd0f8;
+		  padding: 20px;
+		  padding-bottom: 0px;
+		  width: 50%;
+		  float: left;
+		  position:static;
+		  text-align: center;
+		}
+		
+		.score {
+		  color: #acd0f8;
+		  padding-top: 0px;
+		  width: 50%;
+		  float: left;
+		  position:static;
+		  text-align: center;
+		  
+		}
+		
+		.sButton {
+		  width: 30%;
+		  margin: 0px auto;
+		  
+		  
+		}
+		
+		.start {
+		  width: 100%;
+		  height: 30px;
+		  text-align: center;
+		  font-weight: bold;
+		  background-color:#acd0f8;
+		  border-radius: 20px;
+		  margin: 2px auto;
+		  }
+		.history {
+			padding-top:0px;
+		} 
+		
+	</style>
+	<!-- load jQuery 1.12.4 from CDN -->
+	<script src="https://code.jquery.com/jquery-1.12.4.min.js"  
+		integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="   
+		crossorigin="anonymous">
+	</script>
+	<!-- load custom script for game play -->
+	<script src="script.js"></script>
+
+</head>
+<body>
+	<div style= text-align:center;>
+	
+	<img src="simon_sign.png" alt=sign height="145" width="725">
+		</img>
+	</div>
+	
+	<div class="wrapper">
+		
+		<div class= "history"><h3>Your Click History Sequence Record</h3>
+		</div>
+		<div class="back">
+			<div class="pad shape1" id="green" data-pad="1"><audio id="sound1" src="Buzzsaw.wav" ></audio>
+			</div>
+			<div class="pad shape2" id="red" data-pad="2">
+			</div>
+			<div class="pad shape3" id="yellow" data-pad="3">
+			</div>
+			<div class="pad shape4" id="blue" data-pad="4">
+			</div>
+			<div class="circle">
+
+		<div class="level">
+			<h2>Level: 1</h2>
+		</div>
+		<div class="score">
+			<h2>Score: 0</h2>
+		</div>
+		
+		<div class="sButton">
+		
+			<button class="start">START</button>
+			<button class="start">HARD</button>
+			
+		</div>
+	</div>
+	</div>
+		</div>
+	<audio id="sound" src="loser.mp3" ></audio>	
+</body>
+</html>
