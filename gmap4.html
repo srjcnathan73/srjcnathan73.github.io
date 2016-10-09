@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Example 4: Google Map & Distance from Current Location to Second Point</title>
+</head>
+<body>
+    <header>
+        <h1>Example 4: Google Map & Distance from Current Location to Second Point</h1>
+    </header>
+
+	<div id="map-container" style="height:400px;width:600px;">
+	</div>
+	
+	<div id="distance-display">
+	</div>
+
+	<!-- Load the Google Maps API library -->
+	<script type="text/javascript" src="https://maps.google.com/maps/api/js?libraries=geometry&key=AIzaSyANwuVysbRlA9s-4mgKvkdxL0ODklj-Hhg"></script>
+	
+	<!-- Custom code to create map and marker for user's geolocation -->
+	<script>
+	// define variables map1 & marker1 outside function wrapper 
+	// to ensure they are globally available to all code in page
+	var map1, marker1;
+	
+	// define fixed "destination" point for calculating distances
+	var destCoords = new google.maps.LatLng(38.4582425,-122.7167402);
+	
+	// define a second marker variable globally for destination point
+	var destMarker;
+	
+	// first function does initial creation of Google Map centered at 0,0
+	function createMap() {
+		// set latitude and longitude coordinates using Google Map's LatLng() method
+		var mapCoords = new google.maps.LatLng(0, 0);
+
+		// define a property list of settings for the Google Map we are about to create
+		var mapOptions = {
+			zoom: 13,
+			center: mapCoords
+		};
+
+		// use Google's Map() method to create a new map object inside the targeted HTML element
+		map1 = new google.maps.Map(document.getElementById("map-container"), mapOptions);
+		
+		// create a marker at the destination point
+		destMarker = new google.maps.Marker({
+			position: destCoords,
+			map: map1,
+			title:"Destination"
+		});
+	}
+	
+	// second function creates or updates marker location to specific geoloc
+	function drawMarker(yourPosition) {
+		// set latitude and longitude coordinates using Google Map's LatLng() method
+		var markerCoords = new google.maps.LatLng(yourPosition.coords.latitude, yourPosition.coords.longitude);
+		
+		if (marker1) {
+			// marker1 already defined, so just update its lat + long
+			marker1.setPosition(markerCoords);
+		} else {
+			// first time called so create marker
+			marker1 = new google.maps.Marker({
+				position: markerCoords,
+				map: map1,
+				title:"You are here!"
+			});		
+		}
+		
+		// update center of map to match marker location
+		map1.setCenter(markerCoords);
+		
+		// calculate the distance between markerCoords and destCoords
+		var dist = google.maps.geometry.spherical.computeDistanceBetween (markerCoords, destCoords);
+		document.getElementById('distance-display').innerHTML = dist;
+		
+		// once we draw marker, set timer to call userLocation() later to update loc		
+		setTimeout( userLocation, 500);
+	}
+	
+	// third function gets user geoloc, then calls drawMarker()
+	function userLocation() {
+		if (navigator.geolocation) {
+			navigator.geolocation.getCurrentPosition( drawMarker );
+		}
+	}
+
+	// rest of code below will run at time browser loads page
+	createMap();
+	userLocation();
+
+	</script>
+</body>
+</html>
