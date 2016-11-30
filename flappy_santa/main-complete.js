@@ -1,59 +1,56 @@
 // inside this main.js javascript file
 // we will write all of the code to make our game work!
-
+var spriteImage, highScore=0, gameWidth = 0, gameHeight= 0;
+	gameWidth = $(window).width();
+	gameHeight = $(window).height();
+$.getJSON( 'game1.json', function( gameJSON ) {
+spriteImage = gameJSON.spriteimage;
+});
+	
 var mainState = {
 	// the preload function runs right before the game starts
 	preload: function() {
 		// any code inside these curlies runs before game starts!
 		// we will write code here to load the images and the sound
-		game.load.image('background', 'assets/sky-night-starshorizon3.jpg');
+		game.load.image('background', spriteImage.background);
 		// load santa image to use as sprite later on
-		game.load.image('santa', 'assets/christmas_santa_christmas_3.png');
+		game.load.image('santa', spriteImage.santa);
 		
 		// load snowball image
-		game.load.image('snowball', 'assets/snow_ball.png');
-		game.load.image('christmas-tree', 'assets/christmas-tree.png');
+		game.load.image('snowball', spriteImage.snowball);
+		game.load.image('christmas-tree', spriteImage.tree);
 		
 	},
 	// the create function runs right AFTER preload to draw the game
 	create: function() {
 		// our code in these curlies will display sprites (objects)
-		// if keep track of a score we would set to zero here to start
-		//game.world.setBounds(0, 0, 1920, 1200);
-		// set background color of game stage
-		//game.stage.image = ('background', 'assets/sky-night-starshorizon3.jpg');
+
 		 game.add.sprite(0, 0, 'background');
 		// add the physics engine to control for gravity, etc. automatically
 		game.physics.startSystem(Phaser.Physics.ARCADE);
 		
 		// now let's put the santa into the game at a specific location(x,y)
-		this.santa = game.add.sprite(300, 245, 'santa');
-		
+		this.santa = game.add.sprite((gameWidth *.5), (gameHeight * .5), 'santa');
 		// attach some physics for: movement, gravity, collision
 		game.physics.arcade.enable(this.santa);
 		
 		// add some gravity value to help the santa fall down to ground (vertical)
 		this.santa.body.gravity.y = 1000;
-				// connect the user hitting the spacebar to a function called 'jump'
-		/*var spacebar = game.input.keyboard.addKey(
-			Phaser.Keyboard.SPACEBAR
-		);
-		spacebar.onDown.add(this.jump, this);
-		var pointer1 = game.input.activePointer.isDown(
-			Phaser.PointerMode.CURSOR
-		);*/
+				
 		
 		
 		// get ready to build a bunch of snowball objects in a Group
 		this.snowballs = game.add.group();
 		// add timer to run every 1.5 seconds to add a row of snowballs to the game
-		this.timer = game.time.events.loop(2000, this.addRowOfsnowballs, this);
+		this.timer = game.time.events.loop(3000, this.addRowOfsnowballs, this);
 		
 		// add scoring with a variable to keep track of it
 		this.score = 0;
-		this.labelScore = game.add.text(20,20, 'Score 0', {font: "30px Arial", fill: "#ffffff"});
+		this.labelScore = game.add.text(20,50, 'Score 0', {font: "30px Arial", fill: "#ffffff"});
 		this.level = 1;
-		this.labelLevel = game.add.text(20,50, 'Level 1', {font: "30px Arial", fill: "#ffffff"});
+		this.labelLevel = game.add.text(20,80, 'Level 1', {font: "30px Arial", fill: "#ffffff"});
+		
+		this.labelHighScore = game.add.text(20,20, "Highscore "+highScore, {font: "30px Arial", fill: "#ffffff"});
 	},
 	// the update function runs OVER and OVER and OVER again in a loop
 	// once for each time Phaser.js redraws the screen (refresh)
@@ -66,7 +63,7 @@ var mainState = {
 			{ 
 			this.santa.body.velocity.y = -250;
 			}
-		if ( ( this.santa.y < 0 ) || ( this.santa.y > 800 ) ) {
+		if ( ( this.santa.y < 0 ) || ( this.santa.y > gameHeight ) ) {
 			this.restartGame();
 		}
 		
@@ -90,7 +87,11 @@ var mainState = {
 	// should be able to set the x and y position of each snowball
 	addOnesnowball: function( x, y ) {
 		// create a snowball set its position and add it to group
-		
+		/***************************************************************************
+		 * Code change for Week 13 assignment:  I added a level variable and text. *
+		 *  Conditional for a level change when the score reaches 5 with a sprite  *
+		 * image switch and velocity increase.                                     *
+		 ***************************************************************************/
 		if (this.score <= 4)
 		{ 
 			var snowball = game.add.sprite( x, y, 'snowball');
@@ -107,7 +108,7 @@ var mainState = {
 		game.physics.arcade.enable(snowball);
 			snowball.body.velocity.x = -200;
 			this.level = 2;
-			this.labelLevel.text = this.level;
+			this.labelLevel.text = ('Level '+this.level);
 		}
 		// check to see if snowball is off the screen and destroy it if it is
 		snowball.checkWorldBounds = true;
@@ -122,31 +123,27 @@ var mainState = {
 		for ( var counter = 0; counter < 16; counter = counter + 1 ) {
 			if ( counter != hole  && counter != (hole+1) )
 			{
-				this.addOnesnowball(800, counter * 60 + 10);
+				this.addOnesnowball(gameWidth, counter * 60 + 10);
 			}
 		}
 		
 		// every time we add a row of snowballs increase score by 1
 		this.score = this.score + 1;
-		this.labelScore.text = this.score;
-			
+		this.labelScore.text = ('Score '+this.score);
+		if ((this.score>=highScore) && (this.score>=0))
+            {
+            highScore = this.score;
+			this.labelHighScore.text = ("Highscore "+highScore);
+			}	
 	}
+	
 	
 };
 
 // we need to tell the Phaser.js code to create a new game
 // when we do this, we define the dimensions (width + height) in px
-var game = new Phaser.Game(800,700); // 400px w by 490px h game
-	/*winW = window.offsetWidth;            
-	winH = window.offsetHeight;                       
-	            // set canvas to above size            
-	var game = new Phaser.Game(winW, winH, Phaser.CANVAS, '', 
-	{ 
-		preload: preload, 
-		create: create, 
-		update:update
-	});
-	console.log(game);*/
+var game = new Phaser.Game( gameWidth, gameHeight); 
+	
 // now we can start the game code running
 game.state.add('main', mainState, true);
 
