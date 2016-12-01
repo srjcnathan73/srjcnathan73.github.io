@@ -120,7 +120,7 @@ var mainState = {
 		var hole = Math.floor(Math.random() * 5) + 1;
 		
 		// add 6 snowballs with a hole left in them
-		for ( var counter = 0; counter < 16; counter = counter + 1 ) {
+		for ( var counter = 0; counter < gameHeight/50; counter = counter + 1 ) {
 			if ( counter != hole  && counter != (hole+1) )
 			{
 				this.addOnesnowball(gameWidth, counter * 60 + 10);
@@ -142,7 +142,7 @@ var mainState = {
 
 // we need to tell the Phaser.js code to create a new game
 // when we do this, we define the dimensions (width + height) in px
-var game = new Phaser.Game( gameWidth, gameHeight); 
+game = new Phaser.Game( gameWidth, gameHeight, Phaser.CANVAS ); 
 	
 // now we can start the game code running
 game.state.add('main', mainState, true);
