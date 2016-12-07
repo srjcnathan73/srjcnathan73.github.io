@@ -5,6 +5,8 @@ var spriteImage, highScore=0, gameWidth = 0, gameHeight= 0;
 	gameHeight = $(window).height();
 $.getJSON( 'game1.json', function( gameJSON ) {
 spriteImage = gameJSON.spriteimage;
+// now we can start the game code running
+game.state.add('main', mainState, true);
 });
 	
 var mainState = {
@@ -144,8 +146,7 @@ var mainState = {
 // when we do this, we define the dimensions (width + height) in px
 game = new Phaser.Game( gameWidth, gameHeight, Phaser.CANVAS ); 
 	
-// now we can start the game code running
-game.state.add('main', mainState, true);
+
 
 
 
