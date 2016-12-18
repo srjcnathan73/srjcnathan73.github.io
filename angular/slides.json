@@ -1,0 +1,67 @@
+[{
+	"title": "Assignment 1",
+	"date": "8/29/2016",
+	"image": "images/Screenshot (21).png",
+	"description": "Assignment 1: JavaScript Programming Experiment: An Interactive Card Game ",
+	"link": "https://srjcnathan73.github.io/cardgame.html"
+}, {
+	"title": "Assignment 2",
+	"date": "9/12/2016",
+	"image": "images/Screenshot (22).png",
+	"description": "Assignment 2: JavaScript Programming Experiment: Two-Player Interactive Card Game ",
+	"link": "https://srjcnathan73.github.io/cardgame2.html"
+}, {
+	"title": "Assignment 3",
+	"date": "9/19/2016",
+	"image": "images/Screenshot (23).png",
+	"description": "Assignment 3: JavaScript Programming with the jQuery Library ",
+	"link": "https://srjcnathan73.github.io/index.html"
+}, {
+	"title": "Assignment 4",
+	"date": "10/5/2016",
+	"image": "images/Screenshot (24).png",
+	"description": "Assignment 4: JavaScript Programming with the jQuery UI Library",
+	"link": "https://srjcnathan73.github.io/color-match.html"
+}, {
+	"title": "Assignment 5",
+	"date": "10/12/2016",
+	"image": "images/Screenshot (25).png",
+	"description": "Assignment 5: JavaScript Programming with jQuery Plugins",
+	"link": "https://srjcnathan73.github.io/scrollpath-master/welcome.html"
+}, {
+	"title": "Assignment 6",
+	"date": "10/19/2016",
+	"image": "images/Screenshot (27).png",
+	"description": "Assignment 6: JavaScript Programming with Google Maps API ",
+	"link": "https://srjcnathan73.github.io/carlsbootstrap/carlsbootstrap.html"
+}, {
+	"title": "Assignment 7",
+	"date": "10/24/2016",
+	"image": "images/Screenshot (28).png",
+	"description": "Assignment 7: JavaScript Programming with Asynchronously-Loaded JSON Data",
+	"link": "https://srjcnathan73.github.io/jsonmap.html"
+}, {
+	"title": "Assignment 8",
+	"date": "11/9/2016",
+	"image": "images/Screenshot (29).png",
+	"description": "Assignment 8: Data Visualization with JavaScript and the D3 Library ",
+	"link": "https://srjcnathan73.github.io/carColor.html"
+}, {
+	"title": "Assignment 9",
+	"date": "11/16/2016",
+	"image": "images/Screenshot (30).png",
+	"description": "Assignment 9: Simple Game with JavaScript and the Phaser.js Library ",
+	"link": "https://srjcnathan73.github.io/flappy_santa/flappy_santa.html"
+}, {
+	"title": "Assignment 10",
+	"date": "11/23/2016",
+	"image": "images/Screenshot (30).png",
+	"description": "Assignment 10: Evolved Game with JavaScript and the Phaser.js Library ",
+	"link": "https://srjcnathan73.github.io/flappy_santa/flappy_santa.html"
+}, {
+	"title": "Assignment 11",
+	"date": "12/5/2016",
+	"image": "images/Screenshot (30).png",
+	"description": "Assignment 11: Final Game with the Phaser.js Library and JSON ",
+	"link": "https://srjcnathan73.github.io/flappy_santa/flappy_santa.html"
+}]

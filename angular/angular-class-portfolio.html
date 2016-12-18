@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html ng-app="portfolioApp">
+<head>
+	<title>Class Portfolio App</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>AngularJS Portfolio App: v4</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.9/angular.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.9/angular-touch.min.js"></script>
+	<style>
+	body {
+		padding:0;
+		background-color:#580909;
+		color:#fff;
+	}
+	
+	.container {
+		width:100%;
+		height:100%;
+		
+	}
+	.arrow {
+		display:block;
+		position:absolute;
+		width:5%;
+		top:40%;
+		line-height:2;
+		padding:1%;
+		margin:0;
+		background-color:rgba(255,255,255,0.6);
+		border-radius:20%;
+		font-size:5em;
+		text-decoration:none;
+		text-align:center;
+		color:green;
+	}
+	.arrow:last-child {
+		right:0;
+	}
+	.slide {
+		width:100%;
+		height:100%;
+		padding:0;
+		margin:0;
+		text-align:center;
+		cursor:pointer;
+		
+	}
+	
+	</style>
+</head>
+<body ng-controller="portfolioController">
+	
+	<div class="container">
+		
+		<a class="arrow" href="#" ng-click="nextSlide()"> « </a>
+
+		<figure class="slide"
+			ng-repeat="slide in slides | filter:search"
+			ng-swipe-left="nextSlide()" 
+			ng-swipe-right="prevSlide()"
+			ng-hide="!isCurrentSlideIndex($index)">
+			
+			<h1 class="slide">{{slide.title}}</h1>
+			
+			<h2 class="slide">{{slide.date}}</h2>
+
+			<img class="slide"
+				ng-src="{{slide.image}}"
+				alt="{{slide.description}}">
+
+			<figcaption 
+			ng-click="gotoSite()">{{slide.description}}</figcaption>
+		</figure>
+		
+		<input type="text" placeholder="Filter" ng-model="search.description", "search.title", "search.date">
+
+		<a class="arrow" href="#" ng-click="prevSlide()"> » </a>
+	</div>
+
+	<script>
+	var app = angular.module('portfolioApp', ['ngTouch']);
+	app.controller('portfolioController', function($scope, $http) {
+	
+		$http.get("slides.json").then(function(response) {
+			$scope.slides = response.data;
+		});
+
+		$scope.currentIndex = 0;
+
+		$scope.setCurrentSlideIndex = function(index) {
+			$scope.currentIndex = index;
+		};
+
+		$scope.isCurrentSlideIndex = function(index) {
+			return $scope.currentIndex === index;
+		};
+
+		$scope.prevSlide = function() {
+			$scope.currentIndex = ($scope.currentIndex < $scope.slides.length - 1) ? ++$scope.currentIndex : 0;
+		};
+
+		$scope.nextSlide = function() {
+			$scope.currentIndex = ($scope.currentIndex > 0) ? --$scope.currentIndex : $scope.slides.length - 1;
+		};
+
+		$scope.gotoSite = function() {
+			location.href = $scope.slides[$scope.currentIndex].link;
+		}
+	});
+
+	
+	</script>
+</body>
+</html>
