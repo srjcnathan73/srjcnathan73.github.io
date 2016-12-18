@@ -1,0 +1,95 @@
+﻿/*MENU BODY styles v.3.54*/
+.content {
+  max-width:440px;
+}
+.skin7.left .tabs_header {
+	overflow: hidden;
+	padding-top: 0;
+	padding-right: 0;
+	position: relative;
+	margin: 0 -78px 0px 0px;
+	padding: 0px;
+	width: 20%;
+	top: 20px;
+	float: left;
+}
+.skin7.left .tab_content {
+	display: block;
+}
+/* end left */
+
+.skin7.left.tabs_wrapper {
+border: none
+margin: 0 -6px 0 4px;
+overflow: hidden;
+scroll-behavior: none;
+}
+.skin7.left .demo_wrapper {
+	-webkit-right-radius: 9px;
+	-moz-border-radius: 9px;
+	border-radius: 9px;
+}
+ .skin7.left .tabs_header {
+}
+.skin7.left .tab_header_item {
+background: rgba(220, 220, 200, 0.25) repeat-y;
+margin-right: 2px;
+margin-bottom: 2px;
+-webkit-border-top-left-radius: 9px;
+-webkit-border-bottom-left-radius: 9px;
+-moz-border-radius-topleft: 9px;
+-moz-border-radius-bottomleft: 9px;
+border-top-left-radius: 5px;
+border-bottom-left-radius: 5px;
+border-width: thin;
+border-style: outset outset outset outset;
+border-color: #ccc #999 #ccc #ccc;
+width: 79px;
+height: 26px;
+padding-right: 0;
+}
+.skin7.left .tab_header_item.tab_selected {
+	background-image: none;
+	background: rgba(85,65,50, 1);
+	border-style: outset;
+	border-right-width: 0;
+	padding-right: 5px;
+}
+ .skin7.left .tab_header_item.tab_selected a {
+	color: #ff5;
+	text-shadow: black 1px 1px 1.5px;
+}
+ .skin7.left .tab_header_item.first_tab {
+}
+.skin7.left .tab_header_item a {
+display: block;
+padding: 3px;
+text-shadow: white 1px 1px;
+position: relative;
+top: -1px;
+font: bold 12px/14px Arial, Helvetica, sans-serif;
+color: #333;
+text-decoration: none;
+text-align: left;
+
+}
+ .skin7.left .tab_header_item a:hover {
+   text-decoration:none;
+   color:#FFF;
+   text-shadow:black -1px -1px 2px;
+ }
+   
+.skin7.left .content_holder {
+	font: 12pt/14pt Arial, Helvetica, sans-serif;
+	color: cornsilk;
+	background-color: rgba(85, 65, 55, 1);
+	padding: 0 10px 0 10px;
+	border-color: bisque;
+	min-height: 200px;
+	margin: 4px 10px 0 83px;
+	text-align: justify;
+	border-radius: 10pt;
+	border-width: thin;
+	border-style: outset;
+	text-shadow: #550 0.1ex 0.1ex 2px;
+}

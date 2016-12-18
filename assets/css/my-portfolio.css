@@ -1,0 +1,73 @@
+/*  controls top nav bar */
+
+.navbar {font-size:1.75em;background-color: #000033; font-family: 'Merriweather Sans', sans-serif;
+min-height: 90px;
+min-width: 300px;
+padding-top: 20px;
+}
+.navbar-collapse {width:auto;float:right;}
+
+.navbar-brand {font-size:2em; font-weight:bold; font-family: 'Lobster', cursive; letter-spacing:3px; background-color: #dee8f7;}
+/*  end nav  */
+
+body {font-family: 'Merriweather Sans', sans-serif;}
+
+img {border: 10px solid #1f4276;margin:20px;}
+
+.nav-center {position:absolute; left:50%; width:600px; margin-left:-300px ;padding:0;}
+
+/*  controls jumbotron color and shape */
+.col-md-4 .col-sm-4 .left .screenshot{padding-left:0px; padding-top:-20px;}
+.col-lg-5 img{box-shadow:10px 10px 30px rgba(0,0,0,.5);}
+.col-lg-5 img:hover {-moz-transform: rotate(360deg);
+			-webkit-transform:  rotate(360deg);
+			-o-transform:  rotate(360deg);
+			transform:  rotate(360deg);}
+.col-lg-6  p {margin:100px;}
+.jumbotron {min-width: 300px;
+background: -moz-radial-gradient(circle, #f9f, #000); /* Firefox 3.6+ */
+			background: -webkit-gradient(radial , center center, 0, center center, 460, from (#f9f) to(#000)); /* Safari 4 -5 , Chrome 1 -9 */
+			background: -webkit-radial-gradient(circle, #ccffff, #000066); /* Safari 5.1 ,Chrome 10+ */
+			background: -ms-radial-gradient(circle, #f9f, #000); /* IE 10 */
+			background: -o-radial-gradient(circle, #f9f, #000); /* Opera 11.10+ */
+			radial-gradient(circle, #f9f, #000); /* All future browsers */
+			border-radius: 30px;
+			box-shadow:5px 5px 10px rgba(0,0,0,.5), inset 0 0 10px #fff, 0 0 40px #000033;
+padding: 100px 60px 50px 60px; margin-top:50px}
+.jumbotron h1 {padding-top:50px; padding-bottom:30px;}
+.jumbotron h2 {height:80px; padding-left:30px; padding-right:25px; margin-top:0;}
+.home-img  .change-photo{background:url(../images/me_iguana.jpg) no-repeat top center; border: 10px solid #1f4276; height: 300px; width: 300px;}
+.home-img:hover  .change-photo{background:url(../images/me_iguana2.jpg) no-repeat top center;}
+
+.screenshot:hover {-moz-transform: scale(2,2);
+				-webkit-transform: scale(2,2);
+				-o-transform: scale(2,2); transform: scale(2,2);}
+.screenshot{padding-left:0px; padding-top:5px;} 
+.google {text-align:center; font-family: 'Lobster', cursive; color:#330000; text-shadow:2px 2px 0px #9966cc;}
+.google2 {font-family: 'Lobster', cursive; color:#330000; text-shadow:.8px .8px 0px #9966cc;}
+/*  end jumbotron  */
+
+/*  controls content below jumbotron  */
+.h2top {color:#1f4276; 
+	text-shadow:10px 10px 10px rgba(0, 0, 0, 0.5);}
+.row {
+margin-right: 0px;
+margin-left: 0px;
+}
+
+.row:nth-child(odd)  {width:840px; 
+background-image:url(../../images/lido_background2.jpg);
+border: 10px solid #1f4276;  margin:30px auto; padding:10px; 
+ width:auto;}
+
+/* adjust footer  */
+
+footer
+{
+background-color: #ccc;
+padding: 40px 20px 25px 25px;
+}
+
+/*end* footer/
+
+/*  end below jumbotron  */

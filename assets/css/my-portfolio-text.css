@@ -1,0 +1,116 @@
+body {font-family: "Montserrat Light","Helvetica Neue",Helvetica,Arial,Sans-serif;}
+
+/*  controls top nav bar */
+
+
+
+.navbar {
+min-height: 90px;
+padding-top: 20px;
+text-transform:lowercase;
+font-size:120%;
+}
+
+
+.navbar-inverse .navbar-nav > li > a {
+color: #fff;
+}
+
+.navbar-inverse .navbar-nav > li > a:hover {
+color: #999;
+}
+
+/** controls logo*/
+
+.navbar-inverse .navbar-brand {
+font-family: 'Allura', cursive;
+font-size: 50px;
+font-weight: bold;
+padding: 10px 10px 8px 5px;
+background: #fff;
+color: #000;
+letter-spacing: -6px;
+margin-top:-6px;
+text-transform:uppercase;
+}
+
+
+
+.lower {vertical-align:-120%;}
+
+.navbar-inverse .navbar-brand:hover {
+background: #999;
+color: #000;
+}
+
+.navbar-inverse .navbar-nav > .active > a, 
+.navbar-inverse .navbar-nav > .active > a:hover, 
+.navbar-inverse .navbar-nav > .active > a:focus 
+{
+color: #ffffff;
+background-color: #333;
+}
+
+/* end  logo */
+
+/*  end nav  */
+
+
+
+
+
+
+/*  controls jumbotron color and shape */
+
+
+
+.jumbotron {
+background-color: #fff;
+padding: 100px 60px 50px 60px;
+min-height: 500px;}
+
+.jumbotron h1 {font-family: "Ubuntu","Helvetica Neue",Helvetica,Arial,Sans-serif;
+font-weight: bold;
+letter-spacing: -5px;}
+
+.jumbotron h1.home {
+font-family: 'Allura', cursive;
+text-align:center;
+color:#999;
+
+}
+
+.jumbotron p {
+font-size: 70%;
+line-height: 170%;
+color: #777;
+}
+
+/*  controls content below jumbotron  */
+
+.row {
+margin-right: 0px;
+margin-left: 0px;
+}
+
+.row h2
+{
+font-family: 'Ubuntu', "Helvetica Neue",Helvetica,Arial,Sans-serif;
+font-size:24px;
+}
+
+
+.row:nth-child(odd)  {background-color: #eee;}
+
+/* adjust footer  */
+
+footer
+{
+background-color: #ccc;
+padding: 40px 20px 25px 25px;
+}
+
+/*end* footer/
+
+/*  end below jumbotron  */
+
