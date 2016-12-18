@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<style>
+
+body {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  margin: auto;
+  position: relative;
+  width: 960px;
+}
+
+text {
+  font: 10px sans-serif;
+}
+
+form {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+}
+
+</style>
+<form>
+  <label><input type="radio" name="dataset" value="manufacturer"> Manufacturer</label>
+  <label><input type="radio" name="dataset" value="color" checked> Color</label>
+</form>
+<script src="http://d3js.org/d3.v3.min.js"></script>
+<script>
+
+var width = 960,
+    height = 500,
+    radius = Math.min(width, height) / 2;
+
+var color = d3.scale.category20();
+
+var pie = d3.layout.pie()
+    .value(function(d) { return d.freq; })
+    .sort(null);
+
+var arc = d3.svg.arc()
+    .innerRadius(radius - 100)
+    .outerRadius(radius - 20);
+
+var svg = d3.select("body").append("svg")
+    .attr("width", width)
+    .attr("height", height)
+  .append("g")
+    .attr("transform", "translate(" + width / 2 + "," + height / 2 + ")");
+
+d3.json("Carls_cars.json", function(error, json_data) {
+var data = sortByFrequency(json_data);
+//console.log(k);
+
+/* credit to http://stackoverflow.com/questions/3579486/sort-a-javascript-array-by-frequency-and-then-filter-repeats 
+   for this neat function we started with... */
+function sortByFrequency(array) {
+    var frequency = [];
+    var colornames = []; 
+    /* why colornames? because JS doesn't have an easy way for us to find the index of a json element by its value
+    	i.e. we can't find the array position of { "color":"red" } in an array of objects
+    	so we use a simple array of strings to keep track of the position of the color value
+    	in the json array */
+
+    array.forEach(function(value) { 
+    	if (colornames.indexOf( value.color ) < 0) {
+    		frequency.push( { "color" : value.color, "freq":1 } ); 
+    		colornames.push(value.color);
+    	} else {
+    		var existing_counter_index = colornames.indexOf( value.color );
+    		frequency[existing_counter_index].freq = frequency[existing_counter_index].freq + 1; 
+    	}
+    });
+console.log( frequency );
+
+
+	return frequency;
+}
+
+
+  var path = svg.datum(data).selectAll("path")
+      .data(pie)
+    .enter().append("path")
+      .attr("fill", function(d, i) { return color(i); })
+      .attr("d", arc);
+
+  d3.selectAll("input")
+      .on("change", change);
+
+  /*var timeout = setTimeout(function() {
+    d3.select("input[value=\"color\"]").property("checked", true).each(change);
+  }, 2000);*/
+
+  function change() {
+  var data2 = sortByFrequency2(json_data);
+//console.log(k);
+
+/* credit to http://stackoverflow.com/questions/3579486/sort-a-javascript-array-by-frequency-and-then-filter-repeats 
+   for this neat function we started with... */
+function sortByFrequency2(array) {
+    var frequency2 = [];
+    var make = []; 
+    /* why colornames? because JS doesn't have an easy way for us to find the index of a json element by its value
+    	i.e. we can't find the array position of { "color":"red" } in an array of objects
+    	so we use a simple array of strings to keep track of the position of the color value
+    	in the json array */
+
+    array.forEach(function(value) { 
+    	if (make.indexOf( value.manufacturer ) < 0) {
+    		frequency2.push( { "manufacturer" : value.manufacturer, "freq2":1 } ); 
+    		make.push(value.manufacturer);
+    	} else {
+    		var existing_counter_index2 = make.indexOf( value.manufacturer );
+    		frequency2[existing_counter_index2].freq2 = frequency2[existing_counter_index2].freq2 + 1; 
+    	}
+    });
+console.log( frequency2 );
+
+
+	return frequency2;
+}
+    var value = this.value;
+	data == data2;
+    pie.value(function(d) { return d[value]; }); // change the value function
+    path = path.data(pie); // compute the new angles
+    path.attr("d", arc); // redraw the arcs
+  }
+});
+
+function type(d) {
+  d.manufacturer = +d.manufacturer;
+  d.color = +d.color;
+  return d;
+}
+
+</script>
