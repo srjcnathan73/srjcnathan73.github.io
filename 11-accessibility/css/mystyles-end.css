@@ -1,0 +1,94 @@
+@charset "UTF-8";
+/* CSS Document */
+
+body {
+padding-top: 0px;
+}
+
+#jumbo h1 {
+color: #616c74;
+font-size: 40px;
+}
+
+.navbar {
+margin-bottom: 0px;
+}
+
+.navbar-default {
+background-color: #ebb44a;
+border-color: #BD9E70;
+}
+
+.jumbotron {
+background-color: #ebd39b;
+}
+
+.jumbotron p {
+    color: #707C86;
+}
+
+.jumbotron .img-circle {
+margin-left:15px;
+border: solid 6px #b8a697;
+}
+
+h2 {
+color: #616c74;	
+}
+
+.btn-default {
+    background-color: #EBD39B;
+	color: #835d04;
+}
+.btn-default:hover, .btn-default:focus, .btn-default:active, .btn-default.active, .open .dropdown-toggle.btn-default {
+    background-color: #ebb44a;
+}
+
+.list-group-item {
+    padding: 4px 15px;
+}
+
+.jumbotron {
+    margin-bottom: 30px;
+    padding: 10px;
+}
+
+.navbar-collapse {
+    padding-left: 0px;
+}
+
+.list-group-item.active, .list-group-item.active:hover, .list-group-item.active:focus {
+    background-color: #EBD39B;
+	border-color: #c3a357;
+	color: #835d04;
+}
+
+.form-actions {
+    text-align: center;
+}
+
+.form-actions .btn {
+    margin-top: 34px;
+}
+
+.panel-body {
+    background-color: #C1DDD2;
+}
+
+input:invalid { 
+      border-radius: 1px;
+    -moz-box-shadow: 0px 0px 5px red; 
+ -webkit-box-shadow: 0px 0px 5px red; 
+         box-shadow: 0px 0px 5px red;
+}
+
+ input:valid {
+    background-color: #EFFFEF;
+  }
+  :required {
+    background-color: #FCFFDD;
+  }
+  
+.table-striped tbody > tr:nth-child(2n+1) > td {
+    background-color: #f5ce84;
+}
