@@ -10,7 +10,7 @@
 },
 {
 	"filename": "tank1",
-	"frame": {"x":190,"y":52,"w":100,"h":52},
+	"frame": {"x":185,"y":52,"w":100,"h":52},
 	"rotated": false,
 	"trimmed": true,
 	"spriteSourceSize": {"x":3,"y":5,"w":100,"h":52},
