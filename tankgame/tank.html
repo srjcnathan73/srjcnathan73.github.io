@@ -7,8 +7,35 @@
 	<script src="phaser.min.js"></script>
 	<!-- step 2: load our own custom javascript file -->
 	<script src="tanks.js"></script>
+	<style>
+	.buttonStyle {
+	border-radius: 4px;
+	border: thin solid #F0E020;
+	padding: 5px;
+	background-color: #F8F094;
+	font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+	font-weight: bold;
+	color: #663300;
+	width: 75px;
+}
+
+.buttonStyle:hover {
+	border: thin solid #FFCC00;
+	background-color: #FCF9D6;
+	color: #996633;
+	cursor: pointer;
+}
+.buttonStyle:active {
+	border: thin solid #99CC00;
+	background-color: #F5FFD2;
+	color: #669900;
+	cursor: pointer;
+}
+
+</style>
 </head>
 <body>
 	<!-- the game will appear visibly in the page's body -->
+	<button class="buttonStyle" type=button value="Refresh" onClick="history.go()">New Game</button>
 </body>
 </html>

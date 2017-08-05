@@ -81,12 +81,12 @@ var game = new Phaser.Game(800, 600, Phaser.AUTO, 'phaser-example', { preload: p
 
 function preload () {
 
-    game.load.atlas('tank', 'assets/games/tanks/tanks.png', 'assets/games/tanks/tanks.json');
-    game.load.atlas('enemy', 'assets/games/tanks/enemy-tanks.png', 'assets/games/tanks/tanks.json');
-    game.load.image('logo', 'assets/games/tanks/logo.png');
-    game.load.image('bullet', 'assets/games/tanks/bullet.png');
-    game.load.image('earth', 'assets/games/tanks/scorched_earth.png');
-    game.load.spritesheet('kaboom', 'assets/games/tanks/explosion.png', 64, 64, 23);
+    game.load.atlas('tank', 'assets//tanks/tanks.png', 'assets/games/tanks/tanks.json');
+    game.load.atlas('enemy', 'assets//tanks/enemy-tanks.png', 'assets/games/tanks/tanks.json');
+    game.load.image('logo', 'assets//tanks/logo.png');
+    game.load.image('bullet', 'assets//tanks/bullet.png');
+    game.load.image('earth', 'assets//tanks/scorched_earth.png');
+    game.load.spritesheet('kaboom', 'assets//tanks/explosion.png', 64, 64, 23);
     
 }
 
@@ -95,7 +95,7 @@ var land;
 var shadow;
 var tank;
 var turret;
-
+var life = 100;
 var enemies;
 var enemyBullets;
 var enemiesTotal = 0;
@@ -206,7 +206,8 @@ function removeLogo () {
 
 function update () {
 
-    game.physics.arcade.overlap(enemyBullets, tank, bulletHitPlayer, null, this);
+    
+	game.physics.arcade.overlap(enemyBullets, tank, bulletHitPlayer, null, this);
 
     enemiesAlive = 0;
 
@@ -272,6 +273,13 @@ function update () {
 function bulletHitPlayer (tank, bullet) {
 
     bullet.kill();
+	life--;
+	if (life <= 0)
+	{
+		
+		window.alert("Your Life has run out!\n To try again click new game")
+		setTimeout()
+	}
 
 }
 
@@ -308,7 +316,7 @@ function fire () {
 function render () {
 
     // game.debug.text('Active Bullets: ' + bullets.countLiving() + ' / ' + bullets.length, 32, 32);
-    game.debug.text('Enemies: ' + enemiesAlive + ' / ' + enemiesTotal, 32, 32);
+    game.debug.text('Life: ' + life + ' Enemies: ' + enemiesAlive + ' / ' + enemiesTotal, 32, 32);
 
 }
 
