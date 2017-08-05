@@ -10,11 +10,11 @@
 },
 {
 	"filename": "tank1",
-	"frame": {"x":190,"y":52,"w":54,"h":52},
+	"frame": {"x":190,"y":52,"w":100,"h":30},
 	"rotated": false,
 	"trimmed": true,
-	"spriteSourceSize": {"x":3,"y":5,"w":54,"h":52},
-	"sourceSize": {"w":64,"h":64}
+	"spriteSourceSize": {"x":3,"y":5,"w":100,"h":30},
+	"sourceSize": {"w":100,"h":64}
 },
 {
 	"filename": "tank2",
