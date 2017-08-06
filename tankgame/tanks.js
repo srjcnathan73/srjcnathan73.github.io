@@ -295,7 +295,7 @@ function bulletHitEnemy (tank, bullet) {
         explosionAnimation.reset(tank.x, tank.y);
         explosionAnimation.play('kaboom', 30, false, true);
     }
-
+	
 }
 
 function fire () {
@@ -317,6 +317,11 @@ function render () {
 
     // game.debug.text('Active Bullets: ' + bullets.countLiving() + ' / ' + bullets.length, 32, 32);
     game.debug.text('Life: ' + life + ' Enemies: ' + enemiesAlive + ' / ' + enemiesTotal, 32, 32);
-
+	if (enemiesAlive == 0)
+		{
+			
+			window.alert("Nice shooten Tex!\n To try again click new game")
+			setTimeout()
+		}
 }
 
