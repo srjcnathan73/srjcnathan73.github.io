@@ -1,0 +1,615 @@
+
+<!DOCTYPE HTML>
+<html>
+<head>
+	
+    <meta name="author" content="Management Success" >
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+	<meta name="description" content="Body Best Collision center | Auto Body Repair | Collision Repair | Auto Glass Replacement | Auto Body Shop Serving Sonoma CA, Napa, Petaluma and surrounding areas">
+	<meta name="keywords" content="Auto Body Repair Shop, Collision Repair, Car Paint, Auto Paint Shop, Dent Repair, Collision Repair SonomaCA, Auto Body Repair Shop SonomaCA">
+    <meta name="robots" content="index,follow">
+    <link rel="publisher" href="https://plus.google.com/107791653725927348098">
+	<title>Auto Body Shop | Collision Repair | Auto Glass | Body Best Sonoma, CA</title>
+        <link rel="shortcut icon" href="favicon.ico">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/custom.css">
+    <link rel="stylesheet" href="css/responsiveslides.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+    <link href='http://fonts.googleapis.com/css?family=Oswald:700' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Kanit:900italic' rel='stylesheet' type='text/css'>
+	<script src="http://code.jquery.com/jquery-2.1.0.min.js"></script>
+	
+
+</head>
+<body id="home">
+    <!-- Begin Header -->
+    <div class="header_wrapper">
+	<div class="header">
+        
+		<div class="row hidden-xs hidden-sm">
+
+            <div class="col-sm-6">
+                <a href="index.asp" title="Body Best Collision Center | Auto Repair &amp; Service in Sonoma, CA">
+                    <img src="images/bodybest-logo.png" id="lg-logo" alt="Body Best Collision, auto body repair center in Sonoma CA" title="Body Best Collision Center | Auto Repair &amp; Service in Sonoma, CA" />
+                </a>
+          </div><!-- End Col 4-->
+
+            
+
+            <div class="col-sm-6">
+                <div class="header-appt">
+                    <a class="popup-with-zoom-anim" href="#form">
+                        <div class="header-appt-btn">SCHEDULE AN APPOINTMENT</div>
+                    </a>
+                    <div id="form" class="zoom-anim-dialog mfp-hide">
+                        <br />
+                        <iframe src="contact/Default.aspx" frameborder="0" align="middle" marginheight="0" marginwidth="0" scrolling="no" class="scheduler"></iframe>
+                    </div>
+                </div> 
+                <div class="row header-phone">
+                    <div class="col-sm-9">
+                        Call us TODAY <span>(707) 996-2470</span>
+                        <br /><span class="address">19648 8th Street East &middot; Sonoma &middot; CA&nbsp;95476</span>
+                        </div><!-- 9 -->
+                    <div class="col-sm-3 social">
+                        <a href="https://plus.google.com/107791653725927348098/about" target="_blank"><img src="images/icon-google-square.png" style="float: right; border-radius: 3px; margin: 0 10% 0 5%; height: 24px; width: 24px;" class="img-responsive" /></a><a href="https://twitter.com/bodybestsonoma" target="_blank"><img src="images/icon-twitter.png" style="float: right; margin: 0 2% 0 7%; border-radius: 3px;" class="img-responsive" /></a><a href="https://www.facebook.com/BodyBestCollision" target="_blank"><img src="images/icon-facebook.png" class="img-responsive" style="float: right; border-radius: 3px;" /></a>
+                    </div><!--  3 -->
+               </div>
+                
+            </div>
+            
+            
+            
+            <!-- End Col 4-->
+
+                <!--    <div class="col-sm-4">
+               
+           </div>
+
+           <div class="col-sm-8">
+               
+
+
+               
+                    
+            </div><!--/row-->
+                       
+            
+       </div><!--/row--> 
+
+        <div class="col-sm-12 hidden-md hidden-lg" style="top:55px; text-align:center;height: 475px;">
+            <a href="./" title="Body Best Collision Center | Auto Repair &amp; Service in Sonoma, CA">
+                <img id="logo" class="img-responsive" src="images/bodybest-logo.png" style="margin: 0 auto;" alt="Body Best Collision, auto body repair center in Sonoma CA" title="Body Best Collision Center | Auto Repair &amp; Service in Sonoma, CA" />
+            </a>
+
+          <div style="font-size:1em; font-weight:normal; margin:5px 0px 0px 0px;">
+                <a href="tel:+1(707) 996-2470" class="sml-contact">(707) 996-2470</a>
+                <a href="https://www.google.com/maps?ll=38.283028,-122.436849&z=15&t=m&hl=en-US&gl=US&mapclient=embed&q=19648+8th+St+E+Sonoma,+CA+95476" class="sml-contact" target="_blank">Get Directions</a>
+                  <div class="sml-contact" style="font-weight:bold;"> 19648 8th Street East · Sonoma · CA 95476<br />
+               Hours: Mon-Fri: 8AM - 5:30PM</div>
+            </div>
+        </div>
+            
+              
+
+      <div class="row hidden-md hidden-lg">
+            <nav class="navbar navbar-default navbar-fixed-top navbar-inversed">
+                <div class="navbar-header navbar-left">
+                	<a href="#form" class="btn btn-default popup-with-zoom-anim">Appointment</a>
+                </div>
+                <div id="form" class="zoom-anim-dialog mfp-hide">
+              	<br />
+               	<iframe src="contact/Default.aspx" frameborder="0" align="middle" marginheight="0" marginwidth="0" scrolling="no" class="scheduler"></iframe>
+                </div>
+
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#collapse">
+                          <span class="sr-only">Toggle navigation</span>
+                          <span class="icon-bar"></span>
+                          <span class="icon-bar"></span>
+                          <span class="icon-bar"></span>
+                        </button>
+                    </div>
+    
+                <div class="collapse navbar-static" id="collapse" style="text-indent:20px;">
+                    <ul class="nav navbar-nav">
+                        <li><a href="./">Home</a></li>
+                        <li><a href="about.asp">About</a></li>
+                        <li><a href="services.asp#main">Services</a></li>
+                        <li><a href="reviews.asp#main">Reviews</a></li>
+                        <li class="dropdown"><a href="contact.asp#main" data-toggle="dropdown" class="dropdown-toggle">Contact Us <b class="caret"></b></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="insurance.asp#main">Insurance</a></li>
+                            </ul>
+                        </li>
+                         <li>
+                <a href="pdf/Employment-Application.pdf" title="Contact" target="_new">Hiring</span></a></li>
+                    </ul> 	
+                </div>
+            </nav>
+        </div><!--/row-->
+   
+	</div><!--/header-->
+</div><!--/header_wrapper-->
+
+
+<div id="floating-container" class="hidden-xs hidden-sm">
+    <div class="quotebox">
+        <a class="popup-with-zoom-anim" href="#form">
+            <div class="btn-icon"><span>Request Service</span></div>
+        </a>
+    </div>
+    <div id="form" class="zoom-anim-dialog mfp-hide">
+        <br />
+        <iframe src="contact/Default.aspx" frameborder="0" align="middle" marginheight="0" marginwidth="0" scrolling="no" class="scheduler"></iframe>
+    </div><!--appt-->
+   
+</div><!--/floating-container-->
+
+<div class="row hidden-xs hidden-sm navigation">
+   <div class="my_container">
+    <div class="menu_holder">
+        <ul class="menu">
+            <li class="home"><a href="index.asp" title="Home"><span class="displace">Home</span></a></li>
+            
+            <li class="about"><a href="about.asp#main" title="About Us"><span class="displace">About</span></a><ul class="submenu">
+    <li class="dd1"><a class="dd-last" href="about.asp#main" title="Insurance"><span class="displace">Shop History</span></a></li>
+    <li class="dd2"><a class="dd-last" href="wheels-to-prosper-car-giveaway-videos.asp#main" title="Insurance"><span class="displace">Wheels To Prosper</span></a></li>
+    <li class="dd3"><a class="dd-last" href="community-outreach.asp#main" title="Insurance"><span class="displace">Community</span></a></li>
+    <li class="dd4"><a class="dd-last" href="https://bodybestblog.wordpress.com/" title="Insurance" target="_blank"><span class="displace">Blog</span></a></li>
+
+</ul></li>
+
+<li class="blog"><a href="certifications.asp#oem" title="Certifications"><span class="displace">Certifications</span></a></li>
+            
+            <li class="services">
+            <a href="services.asp#main" title="Services"><span class="displace">Services</span></a><ul class="submenu">
+            <li class="dd1"><a class="dd-last" href="services.asp#main" title="Insurance"><span class="displace">Collision Repair</span></a></li>
+            <li class="dd2"><a class="dd-last" href="gallery.asp#main" title="Insurance"><span class="displace">Gallery</span></a></li>
+            <li class="dd2"><a class="dd-last" href="repair-status.asp#main" title="Insurance"><span class="displace">Repair Status</span></a></li>
+            <li class="dd2"><a class="dd-last" href="green-auto-paint-services.asp#main" title="Insurance"><span class="displace">Green Services</span></a></li>
+            <li class="dd2"><a class="dd-last" href="warranty.asp#main" title="Warranty"><span class="displace">Lifetime Warranty</span></a></li>
+
+</ul></li>
+            
+            <li class="reviews"><a href="reviews.asp#main" title="Reviews"><span class="displace">Reviews</span></a></li>
+            
+            <li class="contact">
+                <a href="contact.asp#main" title="Contact"><span class="displace">Contact</span></a></li>
+                <!-- <ul class="submenu">
+                    <li class="dd1"><a class="dd-last" href="insurance.asp#main" title="Insurance"><span class="displace">Insurance</span></a></li> -->
+           <li class="employment">
+                <a href="pdf/Employment-Application.pdf" title="Contact" target="_new"><span class="displace">Now Hiring</span></a></li>
+      </ul>
+            
+      
+    </div><!-- End Sm Row-->
+	</div>
+</div> <!--/col8-->
+    <!-- End Header -->
+<!--
+-->	<div class="banner hidden-sm hidden-xs" >
+        <div class="jumbotron">
+            <ul class="rslides">
+                <li><img src="images/banner-1.jpg" alt="">
+                         <div style="margin-left:29%;margin-right:30%;width:100%;">
+                        <div class="caption1">
+                        	<span>Sonoma's Premier Full-Service Auto Body Repair Center</span>
+                            <!--<a class="popup-with-zoom-anim" href="#form">Schedule An Appointment <img src="images/arrow2.png" width="16" height="24"></a>
+                            <div id="form" class="zoom-anim-dialog mfp-hide">
+ <iframe src="contact/Default.aspx" frameborder="0" align="middle" marginheight="0" marginwidth="0" scrolling="no" class="scheduler"></iframe>
+                        </div>-->
+                         
+                    </div>
+                    </div>
+                    
+                    
+                    </li>
+                    <!-- <li><img src="images/banner-2.jpg" alt=""></li>
+                    <li><img src="images/banner-3.jpg" alt=""></li> -->
+            </ul>
+        </div>
+        <!-- Begin Subnav -->
+       <div class="subnav_a-wrapper">
+<div class="subnav_a">
+	<a name="main"></a>
+    <div class="row">
+    <div class="subnav-container">
+        <a href="certifications.asp#oem" title="OEM Certification">
+            <div class="subnav_1 sub">
+                <h2><span>OEM</span> Certification</h2>
+                <div class="sub-img">
+                    <img src="images/sub-img1.jpg" alt="Body Best Collision, auto body repair center in Sonoma CA" class="img-responsive">
+                </div>
+            </div>
+        </a>
+        <a href="services.asp#main" title="Auto Body Services">
+            <div class="subnav_2 sub">
+                <h2><span>Auto Body</span> Services</h2>
+                <div class="sub-img">
+                    <img src="images/sub-img2.jpg" alt="Body Best Collision, auto body repair center in Sonoma CA" class="img-responsive">
+                </div>
+            </div>
+        </a>
+        <a href="reviews.asp#main" title="Customer Reviews">
+            <div class="subnav_3 sub">
+                <h2><span>Customer</span> Reviews</h2>
+                <div class="sub-img">
+                    <img src="images/sub-img3.jpg" alt="Body Best Collision, auto body repair center in Sonoma CA" class="img-responsive">
+                </div>
+            </div>
+        </a>
+    </div><!-- Sub Container-->
+        
+
+
+    </div><!--/row-->
+</div><!--/subnav_a-->
+</div><!--/wrapper-->
+        <!-- End Subnav -->
+	</div><!--/banner-->
+
+ 	
+
+                    <div class="row mission">
+                            <div class="container">
+                                <div class="col-lg-12">
+                                    <div class="page-title">
+                                    <h1><i>WELCOME TO</i> <span>Body Best Collision Center</span></h1>
+                                    </div>
+                                </div><!-- End 12 -->
+                                
+                            </div><!-- container -->
+        	            
+                    </div><!-- Mission -->
+
+    <div class="row welcome">
+        <div class="container general-repair-home">
+        	
+            </div><!--/row Services list-->  
+        </div><!--/row-->
+        
+        <div class="row home-about">
+            <div class="container">
+            <div class="row" align="center" style="margin-bottom:40px;"> <a href="refer-a-friend.asp#main"><img src="images/specials/banner-win500.jpg" width="996" height="150" alt="Win $500 Body Best Collision, auto body repair center in Sonoma CA" class="img-responsive"></a></div>
+            
+                    <div class="col-lg-8">
+                    
+                    <div class="left">
+                    <h3 class="home-abouth3">Best Auto Body Shop in Sonoma</h3>
+                    <p>Body Best Collision Center is Sonoma’s premier full-service auto body repair center. Family owned and operated, we have been serving the community and surrounding areas since 1990.</p>
+
+<!-- <p>Our technicians and staff are ASE certified and I-CAR Gold Class certified, meaning we provide excellent service using the most advanced techniques. Customer service is and has always been our priority, as is producing quality automotive body work.
+Here at Body Best Collision Center, we are trained and equipped to handle all types of foreign and domestic vehicles. We work with all insurance companies. Since you may be in need of a car while yours is being fixed, we provide loaner cars and also have Hertz rental cars on location for your convenience.</p> -->
+
+<p>Beyond just providing auto body collision repair, auto glass and paint for your car, we are a green business and do what we can to minimize our carbon footprint. We use a low-VOC European waterborne paint, recycle extra parts, shop materials and more.
+Come visit Body Best Collision Center to experience award-winning service within a clean, well-organized facility that is attentive to your car and to the environment. You will drive away with a car that looks and runs like new—we include a full detail with every repair to ensure this is so!</p>
+<a href="about.asp#main">Read More >></a>
+</div>
+                   </div><!-- End 8 -->
+                                <div class="col-lg-4 right">
+                                
+                                <iframe width="100%" height="290" src="https://www.youtube.com/embed/2lhSyxG3lcM?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
+                                <span><strong>Body Best Collision offers a Nationwide Warranty</span>
+                                
+                                  
+                                </div><!-- End 4 -->
+                    <div class="col-lg-12 home-logos">
+                        <img src="images/home-logos.jpg" alt="Affiliations Body Best Collision, auto body repair center in Sonoma CA" class="img-responsive">
+                    </div><!-- 12 -->
+            </div><!-- About -->
+        </div><!-- Row -->
+
+       <div class="row home-services">
+           <div class="container">
+               <div class="col-lg-4 before-after">
+               <h3>Services</h3>
+                   <p>Some of the services and conveniences we offer:</p>
+                   <img src="images/before-after.jpg" alt="Body Best Collision, auto body repair center in Sonoma CA" class="img-responsive">
+               </div><!-- 4 -->
+              <div class="col-lg-8">
+                  <div class="row services-list">
+                      <div class="col-lg-6">
+                          <ul>
+                              <li>Exceptional Customer Service</li>
+                              <li>ASE Certified Collision Shop</li>
+                              <li>I-CAR Gold Class Certified Professionals</li>
+                              <li>Complete Detailing</li>
+                              <li>Computerized Estimates</li>
+                              <li>Loaner Cars</li>
+                              <li>Free Pick-up and Delivery</li>
+                          </ul>
+                     </div><!-- 6 -->
+                     <div class="col-lg-6">
+                          <ul>
+                                  <li>Secure Storage</li>
+                                  <li>Appointments available after hours</li>
+                                  <li>Heated European style full down-draft paint booth</li>
+                                  <li>Standox Lifetime warranty</li>
+                                  <li>Computerize color matching system</li>
+                                  <li>Auto Glass replacement on site</li>
+                         </ul>
+                         <a href="services.asp" class="learn-more">Read More >></a>
+                   </div><!-- 6 -->
+                </div><!-- Row -->
+               </div><!-- 8 -->
+           </div><!-- Container -->
+        </div><!-- Services -->
+
+    <div class="row downdraft">
+           <div class="container">
+               <div class="col-lg-6 box">
+               <br /><h3><!-- The Only Full-Downdraft Paint in Sonoma -->Sonoma's  Full-Downdraft Paint</h3>
+                   <p>Downdraft technology provides a cleaner environment for your paint job. We use DuPont Standox coatings to bring your vehicle back to pre-accident condition. DuPont Performance Coatings brands have earned more commercial and automotive OEM approvals than any other paint supplier.</p>
+                   <a href="services.asp#downdraft">Read More >></a>
+              </div><!-- 7 -->
+              <div class="col-lg-6">
+                  <img src="images/downdraft.jpg" alt="Body Best Collision, auto body repair center in Sonoma CA" class="img-responsive">
+               </div><!-- 5 -->
+           </div><!-- Container -->
+        </div><!-- Services -->
+
+    <div class="row newsletter-specials">
+           <div class="container">
+               <div class="col-lg-4">
+                   <a href="images/summerNews2017.pdf" target="_blank"><span>Newsletter</span>
+                <img src="images/mayNews2017.jpg" alt="Newsletter Body Best Collision, auto body repair center in Sonoma CA" class="img-responsive">
+                Click here to view more >></a>
+          </div><!-- 4 -->
+              <div class="col-lg-4">
+                  <a href="specials.asp#main"><span>Specials</span>
+                  <img src="images/home-specials-btn.png" alt="Specials Body Best Collision, auto body repair center in Sonoma CA" class="img-responsive">
+                  Click here to view more >></a>
+             </div><!-- 4 -->
+               <div class="col-lg-4 insurance">
+                  <span>Insurance Tips</span>
+                        <p>If you just had an accident, you might not know what to do now. Auto accidents are already very confusing, so we found it to be quite helpful if someone is there to guide you through the whole process or even handle it for you – after all you're already stressed out and don't need more stress!</p>
+                        <a href="insurance.asp#main">Read More >></a>
+               </div><!-- 4 -->
+           </div><!-- Container -->
+        </div><!-- Services -->
+
+    <div class="row wtp-home">
+           <div class="container">
+               <div class="col-lg-12 box">
+                    <div class="col-lg-4"> <a href="wheels-to-prosper-car-giveaway-videos.asp"><img src="images/logo-WTP.png" alt="Wheels to Prosper Body Best Collision, auto body repair center in Sonoma CA" class="img-responsive wtp-logo"></a>
+               </div><!-- 4 -->
+                   <div class="col-lg-4">
+                   <a href="pdf/wheels-to-prosper-2013.pdf" target="_blank">
+                       <img src="images/car-giveaway.jpg" alt="" class="img-responsive giveaway">
+                       </a>
+                       <a href="pdf/wheels-to-prosper-2013.pdf" class="learn-more" target="_blank">Click here for more info >></a>
+                    </div><!-- 4 -->
+                   <div class="col-lg-4">
+                       <h3>NATIONWIDE CAR GIVEAWAY<br />to a deserving person!</h3>
+                       <a href="contact.asp#main" class="wtp-submit">submit your letter</a>
+                    </div><!-- 4 -->
+               </div><!-- 12 -->
+           </div><!-- Container -->
+        </div><!-- Services -->
+
+    <div class="row insurance-home">
+           <div class="container">
+               
+                    <div class="col-lg-6 blue">
+                        <h3>Insurance Tips</h3>
+                        <p>If you just had an accident, you might not know what to do now. Auto accidents are already very confusing, so we found it to be quite helpful if someone is there to guide you through the whole process or even handle it for you – after all you're already stressed out and don't need more stress!</p>
+                       
+                    </div><!-- 6 -->
+                   <div class="col-lg-6 pic">
+                       
+                       
+                    </div><!-- 6 -->
+               
+           </div><!-- Container -->
+        </div><!-- Insurance -->
+
+
+        <div class="row blog-home">
+           <div class="container">
+                   <div class="col-lg-4 pad bg">
+                        <h3>Find Out What Our Customers Are Saying </h3>
+                       <p>"They did a very nice job with two separate vehicles belonging to us. Friendly, prompt, and reasonable."</p>
+                       <a href="reviews.asp#main">Read More >></a>
+                   </div><!-- 4 -->
+                   <div class="col-lg-4 bg">
+                        
+                        <div class="row">
+                            <div class="col-lg-4 social">
+                                <span>FOLLOW US</span>
+                                <a href="https://www.facebook.com/BodyBestCollision" target="_blank"><img src="images/icon-facebook2.png" class="img-responsive" /></a><a href="https://twitter.com/Bodybest2020" target="_blank"><img src="images/icon-twitter2.png" class="img-responsive" /></a><a href="https://plus.google.com/107791653725927348098/about" target="_blank"><img src="images/icon-google2.png" class="img-responsive" /></a>
+                            </div><!-- 6 -->
+                            <div class="col-lg-8">
+                        <div id="fb-root" style="width:130px;"><script src="http://connect.facebook.net/en_US/all.js#xfbml=1"></script><fb:like-box href="http://www.facebook.com/pages/BODY-BEST-Collision-Center-INC/163263680388793" width="130" show_faces="true" stream="false" header="true"></fb:like-box></div>
+                                </div><!-- 6 -->
+                            </div><!-- Row -->
+
+                   </div><!-- 4 -->
+                   <div class="col-lg-4 pad ">
+                        <h3 class="blog">Blog</h3>
+
+<p style="font-size: 11.4px;">January Recipe: Yummy in hte Tummy Bites<br />
+3 Amazing 4th of July Celebrations in Sonoma<br />
+June Recipe: Lemon Bars with Shortbread Crust<br />
+Body Best is proud to sponsor 3M Hire Our Heroes<br />
+May Recipe: Romance Your Romaine Salad with Red Wine Vinaigrette<br />
+Top 4 summer Car Care Tips<br />
+Send us your nominations for Wheels to Prosper 2016!<br />
+How to drive safely on St. Patrick's Day</p>
+                   </div><!-- 4 -->
+          </div><!-- Container -->
+        </div><!-- Blog -->
+
+
+
+    
+            
+	<div class="clearfix"></div>
+	<!-- Begin Footer -->
+	
+<br /><br />
+<div class="footer_wrapper">
+    
+	<div class="row">
+    	<div class="footer-title">
+            <h1>Vehicles We Repair</h1>
+        </div>
+        <ul class="vehicles-serviced">
+            <li><img src="images/vehicles-serviced1.png" alt="Body Best Collision, auto body repair center in Sonoma CA" class="img-responsive" /></li>
+            <li><img src="images/vehicles-serviced2.png" alt="Body Best Collision, auto body repair center in Sonoma CA" class="img-responsive" /></li>
+            <li class="last"><img src="images/vehicles-serviced3.png" alt="Body Best Collision, auto body repair center in Sonoma CA" class="img-responsive" /></li>
+        </ul>
+	</div><!--/row--> 
+
+
+<div class="footer">
+
+                  
+	<div class="row footer-top" > 
+        	<div class="col-sm-2">
+
+            	<a href="vehicles.asp?make=Buick" title="Buick Repair and Service in Sonoma, CA">Buick</a>
+            	<a href="vehicles.asp?make=Cadillac" title="Cadillac Repair and Service in Sonoma, CA">Cadillac</a>
+            	<a href="vehicles.asp?make=Chevrolet" title="Chevrolet Repair and Service in Sonoma, CA">Chevrolet</a>
+            	<a href="vehicles.asp?make=Chrysler" title="Chrysler Repair and Service in Sonoma, CA">Chrysler</a>
+            	<a href="vehicles.asp?make=Dodge" title="Dodge Repair and Service in Sonoma, CA">Dodge</a>
+            	<a href="vehicles.asp?make=Ford" title="Ford Repair and Service in Sonoma, CA">Ford</a>
+			</div>            	
+        	<div class="col-sm-2">
+            	<a href="vehicles.asp?make=GMC" title="GMC Repair and Service in Sonoma, CA">GMC</a>
+                <a href="vehicles.asp?make=Jeep" title="Jeep Repair and Service in Sonoma, CA">Jeep</a>
+            	<a href="vehicles.asp?make=Lincoln" title="Lincoln Repair and Service in Sonoma, CA">Lincoln</a>
+            	<a href="vehicles.asp?make=Mercury" title="Mercury Repair and Service in Sonoma, CA">Mercury</a>
+            	<a href="vehicles.asp?make=Oldsmobile" title="Oldsmobile Repair and Service in Sonoma, CA">Oldsmobile</a>
+            	<a href="vehicles.asp?make=Pontiac" title="Pontiac Repair and Service in Sonoma, CA">Pontiac</a>
+			</div>
+        	<div class="col-sm-2">
+            	<a href="vehicles.asp?make=Saturn" title="Saturn Repair and Service in Sonoma, CA">Saturn</a>
+            	<a href="vehicles.asp?make=Hummer" title="Hummer Repair and Service in Sonoma, CA">Hummer</a>
+                <a href="vehicles.asp?make=Mercedes" title="Mercedes Repair and Service in Sonoma, CA">Mercedes</a>
+            	<a href="vehicles.asp?make=Mini Cooper" title="Mini Cooper Repair and Service in Sonoma, CA">Mini Cooper</a>
+            	<a href="vehicles.asp?make=Porsche" title="Porsche Repair and Service in Sonoma, CA">Porsche</a>
+            	<a href="vehicles.asp?make=Volkswagen" title="Volkswagen Repair and Service in Sonoma, CA">Volkswagen</a>
+            	
+			</div>
+        	<div class="col-sm-2">
+            	<a href="vehicles.asp?make=Jaguar" title="Jaguar Repair and Service in Sonoma, CA">Jaguar</a>
+            	<a href="vehicles.asp?make=BMW" title="BMW Repair and Service in Sonoma, CA">BMW</a>
+            	<a href="vehicles.asp?make=Audi" title="Audi Repair and Service in Sonoma, CA">Audi</a>
+                <a href="vehicles.asp?make=Saab" title="Saab Repair and Service in Sonoma, CA">Saab</a>
+            	<a href="vehicles.asp?make=Volvo" title="Volvo Repair and Service in Sonoma, CA">Volvo</a>
+            	<a href="vehicles.asp?make=Hyundai" title="Hyundai Repair and Service in Sonoma, CA">Hyundai</a>
+			</div>
+        	<div class="col-sm-2">
+            	<a href="vehicles.asp?make=Mitsubishi" title="Mitsubishi Repair and Service in Sonoma, CA">Mitsubishi</a>
+            	<a href="vehicles.asp?make=Nissan" title="Nissan Repair and Service in Sonoma, CA">Nissan</a>
+            	<a href="vehicles.asp?make=Scion" title="Scion Repair and Service in Sonoma, CA">Scion</a>
+            	<a href="vehicles.asp?make=Subaru" title="Subaru Repair and Service in Sonoma, CA">Subaru</a>
+            	
+                <a href="vehicles.asp?make=Toyota" title="Toyota Repair and Service in Sonoma, CA">Toyota</a>
+            	<a href="vehicles.asp?make=Acura" title="Acura Repair and Service in Sonoma, CA">Acura</a>
+ 			</div>           	
+        	<div class="col-sm-2">
+            	<a href="vehicles.asp?make=Honda" title="Honda Repair and Service in Sonoma, CA">Honda</a>
+            	<a href="vehicles.asp?make=Infiniti" title="Infiniti Repair and Service in Sonoma, CA">Infiniti</a>
+            	<a href="vehicles.asp?make=Kia" title="Kia Repair and Service in Sonoma, CA">Kia</a>
+            	<a href="vehicles.asp?make=Lexus" title="Lexus Repair and Service in Sonoma, CA">Lexus</a>
+            	<a href="vehicles.asp?make=Mazda" title="Mazda Repair and Service in Sonoma, CA">Mazda</a>
+
+			</div>
+
+	</div><!--row-->
+   </div><!--/footer-->
+
+	<div class="row footer-bottom" style="text-align:center;">
+		<div class="container">        
+        <div class="col-sm-8 col-sm-push-2">
+ 			<a href="./" title="Body Best Collision Center | Auto Repair in Sonoma, CA | Home Page">Home</a> | 
+            <a href="about.asp#main" title="Body Best Collision Center | Auto Repair in Sonoma, CA | About Us">About Us</a> | 
+            <a href="services.asp#main" title="Body Best Collision Center | Auto Repair in Sonoma, CA | Services">Services</a> | 
+            <a href="reviews.asp#main" title="Body Best Collision Center | Auto Repair in in Sonoma, CA | Customer Reviews">Reviews</a> | 
+            <a href="tips.asp#main" title="Body Best Collision Center | Auto Repair in in Sonoma, CA | Car Care Tips">Car Care Tips</a> |
+            <a href="contact.asp#main" title="Body Best Collision Center | Auto Repair in Sonoma, CA | Contact Us">Contact Us</a>
+ 			<br />
+            <p style="font-weight:bold; font-size:12px;">Body Best Collision Center &mdash; <a href="./" title="Auto Repair &amp; Service for Sonoma, CA">Car and SUV Repair &amp; Service in Sonoma, CA</a><br /> 
+            Serving 
+            <a href="areas.asp?Location=El Verano#main" title="El Verano Auto Repair &amp; Service for El Verano, CA">El Verano</a>,
+                    <a href="areas.asp?Location=Temelec#main" title="Temelec Auto Repair &amp; Service for Temelec, CA">Temelec</a>, 
+                    <a href="areas.asp?Location=Eldridge#main" title="Eldridge Auto Repair &amp; Service for Eldridge, CA">Eldridge</a>,
+                    <a href="areas.asp?Location=Glen Ellen#main" title="Glen Ellen Auto Repair &amp; Service for Glen Ellen, CA">Glen Ellen</a>, 
+                    <a href="areas.asp?Location=Schellville#main" title="Schellville Auto Repair &amp; Service for Schellville, CA">Schellville</a>,
+                    <a href="areas.asp?Location=Vineburg#main" title="Vineburg Auto Repair &amp; Service for Vineburg, CA">Vineburg</a>,
+                    <a href="areas.asp?Location=Napa#main" title="Napa Auto Repair &amp; Service for Napa, CA">Napa</a>, 
+                    <a href="areas.asp?Location=Petaluma#main" title="Petaluma Auto Repair &amamp; Service for Petaluma, CA">Petaluma</a><!-- <br />
+                    <a href="areas.asp?Location=Vineburg#main" title="Vineburg Auto Repair &amp; Service for Vineburg, CA">Vineburg</a>, 
+                    <a href="areas.asp?Location=Napa#main" title="Napa Auto Repair &amp; Service for Napa, CA">Napa</a>,
+                    <a href="areas.asp?Location=Petaluma#main" title="Petaluma Auto Repair &amp; Service for Petaluma, CA">Petaluma</a>, 
+                    <a href="areas.asp?Location=#main" title=" Auto Repair &amp; Service for , CA"></a>,
+                    <a href="areas.asp?Location=#main" title=" Auto Repair &amp; Service for , CA"></a> -->
+            and surrounding areas.
+            </p>        
+            <p style="font-size:12px; font-weight:bold;">19648 8th Street East&nbsp;&bull;&nbsp;Sonoma&nbsp;&bull;&nbsp;CA&nbsp;95476&nbsp;&bull;&nbsp;(707) 996-2470&nbsp;&bull;&nbsp;<a href="privacy.asp" title="Body Best Collision Center in Sonoma, CA | Privacy Policy">Privacy Policy</a></p>
+        	<p style="font-size:10px; font-weight:bold;">&copy; <a href="http://www.managementsuccess.com" target="_blank" title="Management Success! Automotive Industry Consulting, Training &amp; Seminars">Management Success!</a>. All rights reserved.</p>
+        </div>
+        <div class="col-sm-2 col-sm-pull-8 col-xs-6" style="padding:20px 0px 0px 0px;">
+			<span id="siteseal"><script async type="text/javascript" src="https://seal.godaddy.com/getSeal?sealID=BcfaGh0gERPu7zhuUqDSXyQ5dvqr0EQdNqkKqve9FeTUZfn5nq2xnEWqkYNF"></script></span>
+        </div>
+        <div class="col-sm-2 col-xs-6" style="padding:20px 0px 0px 0px;">
+            <a href="http://www.managementsuccess.com/Websites/overview.asp" target="_blank" title="MS! Automotive Shop Website Design, Development, Marketing and SEO">
+            <img src="images/ms-website-design-logo.png" alt="MS! Automotive Shop Website Design, Development, Marketing and SEO" title="MS! Automotive Shop Website Design, Developement, Marketing and SEO" />
+            </a>
+        </div>
+        <div style="clear:both;"></div>
+        </div>
+	</div><!--/row-->  
+          
+
+</div><!--/footer_wrapper-->
+	<!-- End Footer -->
+      
+	<script src="js/respond.min.js"></script>
+    <script src="js/jquery.magnific-popup.min.js"></script>
+    
+    <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-22562665-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+    
+	<script src="js/bootstrap.min.js"></script>
+    <script src="js/responsiveslides.min.js"></script>
+	<script>
+        $(function () {
+          $(".rslides").responsiveSlides({
+            auto: true,
+            maxwidth: 1920,
+            speed: 2000,
+            timeout: 6000
+          });
+        });
+    </script>
+    <script>
+		 $(document).ready(function() {
+			$('.popup-with-zoom-anim').magnificPopup({
+				type: 'inline',
+				fixedContentPos: false,
+				fixedBgPos: true,
+				overflowY: 'auto',
+				closeBtnInside: true,
+				preloader: false,
+				midClick: true,
+				removalDelay: 300,
+				mainClass: 'my-mfp-zoom-in'
+			});
+		});
+	</script>
+</body>
+</html>
