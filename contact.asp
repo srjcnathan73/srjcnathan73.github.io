@@ -7,9 +7,9 @@
 	Appointment
 </title><link href="Styles/Site.css" rel="stylesheet" type="text/css" />
     <link rel="stylesheet" href="../css/bootstrap.css">
-    <script src="../js/respond.min.js"></script>
+    <script src="assets/js/respond.min.js"></script>
     <script src="https://code.jquery.com/jquery-2.1.0.min.js"></script> 
-	<script src="../js/bootstrap.min.js"></script>
+	<script src="assets/js/bootstrap.min.js"></script>
     <style>
 	body {color:#807e7e;}
 	.text_boxes {width:95%; display:inline; margin-bottom:10px;}
