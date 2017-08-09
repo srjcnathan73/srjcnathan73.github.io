@@ -563,6 +563,8 @@ a.facebook{
 	height:45px;
 	width:45px;
 	padding:5px;
+	
+	float:left;
 }
 .red-btn a:hover, a.tips-btn:hover {text-decoration:none; background:#1690b8;}
 .sml-contact {cursor:pointer; color:#fff; text-align: center;}
