@@ -1,14 +1,14 @@
 
 
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="https://www.w3.org/1999/xhtml" xml:lang="en">
 <head><title>
 	Appointment
 </title><link href="Styles/Site.css" rel="stylesheet" type="text/css" />
     <link rel="stylesheet" href="../css/bootstrap.css">
     <script src="../js/respond.min.js"></script>
-    <script src="http://code.jquery.com/jquery-2.1.0.min.js"></script> 
+    <script src="https://code.jquery.com/jquery-2.1.0.min.js"></script> 
 	<script src="../js/bootstrap.min.js"></script>
     <style>
 	body {color:#807e7e;}
